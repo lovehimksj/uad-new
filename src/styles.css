@@ -1,0 +1,324 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.example-card {
+  margin: 16px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.search-input-auto-complete {
+  max-width: 100%;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.search-input-auto-complete form {
+  background: #f1f3f4;
+  border: 1px solid #0000;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 720px;
+  position: relative;
+  -webkit-transition: background 100ms ease-in, width 100ms ease-out;
+  transition: background 100ms ease-in, width 100ms ease-out;
+  transition-property: background, width;
+  transition-duration: 100ms, 100ms;
+  transition-timing-function: ease-in, ease-out;
+  transition-delay: 0s, 0s;
+  height: 48px;
+  display: flex;
+  /*align-items: center;*/
+  /*padding: 0 8px;*/
+}
+
+.search-input-auto-complete form div.search-input input {
+  background: #0000;
+  border: none;
+  font: normal 16px Roboto, sans-serif;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  height: 46px;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 56px;
+}
+
+.search-input-auto-complete form div.search-input {
+  width: 100%;
+  height: 48px;
+}
+
+.logo {
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 8px;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.more-search {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100% !important;
+}
+
+.inner-sidenav-content {
+  overflow: hidden;
+  position: relative;
+  top: 64px;
+  height: calc(100% - 64px);
+}
+
+.apps-menu {
+  width: 320px;
+  max-width: 420px !important;
+}
+
+.apps-menu .mat-menu-content {
+  background: #fff;
+  margin: 0;
+  min-height: 100px;
+  padding: 24px !important;
+  text-align: left;
+  white-space: normal;
+  /*width: 265px;*/
+}
+
+.app-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.app-list li {
+  display: flex;
+  width: 33.33%;
+  text-align: center;
+  padding: 4px;
+  box-sizing: border-box;
+  height: 96px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.app-title {
+  font-size: 13px;
+}
+
+.profile-menu {
+  width: 360px;
+  max-width: 420px !important;
+}
+
+.avatar-profile {
+  width: 96px !important;;
+  height: 96px !important;;
+  overflow: hidden !important;;
+}
+
+.avatar-profile img {
+  width: 100% !important;;
+}
+
+.left-side-menu {
+  width: 256px;
+  position: sticky;
+  float: left;
+}
+
+.main-content {
+  width: calc(100% - 256px);
+  float: left;
+  height: 100%;
+}
+
+.content {
+  padding: 0 8px;
+}
+
+.filter-breadcrumb {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.fs-11 {
+  font-size: 11px !important;
+}
+
+.fs-12 {
+  font-size: 12px !important;
+}
+
+.fs-13 {
+  font-size: 13px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-15 {
+  font-size: 15px !important;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+
+.fs-17 {
+  font-size: 17px !important;
+}
+
+.fs-18 {
+  font-size: 18px !important;
+}
+
+.fs-19 {
+  font-size: 19px !important;
+}
+
+.fs-20 {
+  font-size: 20px !important;
+}
+
+.no-m {
+  margin: 0 !important;
+}
+
+.mat-card.quick-card {
+  height: 190px;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  box-sizing: border-box;
+}
+
+.mat-card-content.quick-card-content {
+  margin: 0;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mat-card-content.quick-card-content img {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.mat-card-header.quick-card-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid #dadce0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 13px 16px;
+  width: 100%;
+}
+
+.mat-card-avatar.quick-card-avatar {
+  width: 16px;
+  height: 16px;
+}
+
+.mat-card-avatar.quick-card-avatar img {
+  width: 16px;
+  height: 16px;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.grid-tile .quick-card {
+  /*padding-top: 0 !important;*/
+  height: 248px !important;
+}
+
+.folder-tile .folder-list .mat-list-item {
+  height: 48px !important;
+  border: 1px solid #dadce0;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.folder-tile .folder-list {
+  height: 48px !important;
+  width: 100%;
+  padding: 0 !important;
+}
+
+.doc-name {
+  -webkit-align-self: center;
+  align-self: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /*width: -webkit-calc(100% - 80px);*/
+  /*width: calc(100% - 80px);*/
+}
+
+.quick-card-header .mat-card-header-text {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 12px;
+}

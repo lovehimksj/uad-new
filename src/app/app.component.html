@@ -1,0 +1,394 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" (contextmenu)="onRightClick($event)"
+     style="position:absolute;top:0;left:0;right:0;bottom:0;">
+  <mat-toolbar color="primary" class="fixed-header">
+    <mat-toolbar-row>
+      <div class="logo">
+        <img alt="" aria-hidden="true" src="http://www.shopezzy.com/images/apple-touch-icon-114-precomposed.png"
+             style="width:40px;height:40px">
+        <span class="gb_Pd gb_Rd">Smart Shopee</span>
+      </div>
+      <div class="search-input-auto-complete">
+        <form>
+          <div class="search-button">
+            <button type="button" mat-icon-button color="accent">
+              <mat-icon aria-hidden="false" aria-label="Search" matTooltip="Search"
+                        [svgIcon]="'search_round'"></mat-icon>
+            </button>
+          </div>
+          <div class="search-input">
+            <input matInput="" [placeholder]="'Search Product'" type="text" aria-label="Number"
+                   [formControl]="myControl"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete [autoActiveFirstOption]="true" #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </div>
+          <div class="more-search">
+            <button type="button" mat-icon-button color="accent">
+              <mat-icon aria-hidden="false" aria-label="Search Options" matTooltip="Search Options"
+                        [svgIcon]="'drop_arrow_round'"></mat-icon>
+            </button>
+          </div>
+        </form>
+      </div>
+      <span class="example-spacer"></span>
+      <div>
+
+        <!--help menu starts-->
+        <button mat-icon-button color="accent" [matMenuTriggerFor]="help">
+          <mat-icon aria-hidden="false" aria-label="Support" matTooltip="Support">help_outline</mat-icon>
+        </button>
+        <mat-menu #help="matMenu" [xPosition]="'before'">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voicemail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+        <!--help menu ends-->
+
+
+        <!--setting menu starts-->
+        <button mat-icon-button color="accent" [matMenuTriggerFor]="setting">
+          <mat-icon aria-hidden="false" aria-label="Settings" matTooltip="Setting"
+                    [svgIcon]="'settings_outline'"></mat-icon>
+        </button>
+        <mat-menu #setting="matMenu" [xPosition]="'before'">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voicemail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+        <!--setting menu ends-->
+      </div>
+
+      <div style="padding-left: 32px;">
+        <!--app menu starts-->
+        <button mat-icon-button color="accent" [matMenuTriggerFor]="apps">
+          <mat-icon aria-hidden="false" aria-label="Support" matTooltip="Apps" [svgIcon]="'app_round'"></mat-icon>
+        </button>
+        <mat-menu class="apps-menu" #apps="matMenu" [xPosition]="'before'">
+          <ul class="app-list">
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+            <li>
+              <div><img width="40px" src="https://www.gstatic.com/images/branding/product/1x/drive_48dp.png" alt="">
+              </div>
+              <div><span class="app-title">App Name</span></div>
+            </li>
+          </ul>
+        </mat-menu>
+        <!--app menu ends-->
+
+
+        <!--profile menu starts-->
+        <button mat-icon-button color="accent" [matMenuTriggerFor]="userProfile">
+          <mat-icon aria-hidden="false"
+                    matTooltip="Google Account: himanshu maheshwari (animatorhimanshu.ksj@gmail.com)"
+                    aria-label="Google Account: himanshu maheshwari (animatorhimanshu.ksj@gmail.com)"
+                    [svgIcon]="'account_outline'"></mat-icon>
+        </button>
+        <mat-menu class="profile-menu" #userProfile="matMenu" [xPosition]="'before'">
+          <mat-card class="mat-elevation-z0">
+            <mat-card-header>
+              <div mat-card-avatar class="avatar-profile">
+                <img
+                  src="https://lh3.googleusercontent.com/-wC4RY3oc6BE/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3re4kqqBXaq8UBTAaN7DHgm9pgSdxA/s192-c-mo/photo.jpg"
+                  alt="">
+              </div>
+              <mat-card-title class="fs-13">himanshu maheshwari</mat-card-title>
+              <mat-card-subtitle class="fs-13">animatorhimanshu.ksj@gmail.com</mat-card-subtitle>
+              <mat-card-subtitle class="fs-12"><a href="">Privacy</a></mat-card-subtitle>
+              <mat-card-subtitle>
+                <button mat-button="" [color]="'secondary'">Google Account</button>
+              </mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </mat-menu>
+        <!--profile menu ends-->
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="inner-sidenav-content">
+    <perfect-scrollbar style="" class="left-side-menu">
+      <aside>
+        <mat-accordion>
+          <mat-expansion-panel class="mat-elevation-z0">
+            <mat-expansion-panel-header [collapsedHeight]="'40px'" [expandedHeight]="'40px'">
+              This is the expansion 1 title
+            </mat-expansion-panel-header>
+            This the expansion 1 content
+          </mat-expansion-panel>
+
+        </mat-accordion>
+      </aside>
+    </perfect-scrollbar>
+    <div class="main-content">
+      <div class="filter-breadcrumb">
+        <button [color]="'accent'" mat-button [matMenuTriggerFor]="menu">Home
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <span class="example-spacer"></span>
+        <button *ngIf="gridView" type="button" mat-icon-button color="accent" (click)="gridView = false">
+          <mat-icon aria-hidden="false" aria-label="List View" matTooltip="List View"
+                    [svgIcon]="'view_list'"></mat-icon>
+        </button>
+        <button *ngIf="!gridView" type="button" mat-icon-button color="accent" (click)="gridView = true">
+          <mat-icon aria-hidden="false" aria-label="Grid View" matTooltip="Grid View"
+                    [svgIcon]="'view_grid'"></mat-icon>
+        </button>
+        <button type="button" mat-icon-button color="accent">
+          <mat-icon aria-hidden="false" aria-label="View Details" matTooltip="View Details"
+                    [svgIcon]="'outline_info'"></mat-icon>
+        </button>
+      </div>
+      <mat-divider></mat-divider>
+      <perfect-scrollbar style="height: calc(100% - 48px);">
+        <div class="content">
+          <p class="fs-14">Quick Access</p>
+          <mat-grid-list [cols]="5" [gutterSize]="16" [rowHeight]="'206px'">
+            <mat-grid-tile>
+              <mat-card class="quick-card mat-elevation-z0">
+                <mat-card-content class="quick-card-content">
+                  <img mat-card-image
+                       src="https://lh3.google.com/u/0/d/1PbPGGDAicHECl_iLssoEiYVQ4hIkb_DkD2B5SOyTo5A=w600-k-iv4"
+                       alt="Photo of a Shiba Inu">
+                </mat-card-content>
+                <mat-card-header class="quick-card-header">
+                  <div mat-card-avatar class="quick-card-avatar">
+                    <img
+                      src="https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.document"
+                      alt="">
+                  </div>
+                  <mat-card-title class="no-m fs-13">Shiba Inu</mat-card-title>
+                  <mat-card-subtitle class="no-m fs-12">Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card class="quick-card mat-elevation-z0">
+                <mat-card-content class="quick-card-content">
+                  <img mat-card-image
+                       src="https://lh3.google.com/u/0/d/1PbPGGDAicHECl_iLssoEiYVQ4hIkb_DkD2B5SOyTo5A=w600-k-iv4"
+                       alt="Photo of a Shiba Inu">
+                </mat-card-content>
+                <mat-card-header class="quick-card-header">
+                  <div mat-card-avatar class="quick-card-avatar">
+                    <img
+                      src="https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.document"
+                      alt="">
+                  </div>
+                  <mat-card-title class="no-m fs-13">Shiba Inu</mat-card-title>
+                  <mat-card-subtitle class="no-m fs-12">Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card class="quick-card mat-elevation-z0">
+                <mat-card-content class="quick-card-content">
+                  <img mat-card-image
+                       src="https://lh3.google.com/u/0/d/1PbPGGDAicHECl_iLssoEiYVQ4hIkb_DkD2B5SOyTo5A=w600-k-iv4"
+                       alt="Photo of a Shiba Inu">
+                </mat-card-content>
+                <mat-card-header class="quick-card-header">
+                  <div mat-card-avatar class="quick-card-avatar">
+                    <img
+                      src="https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.document"
+                      alt="">
+                  </div>
+                  <mat-card-title class="no-m fs-13">Shiba Inu</mat-card-title>
+                  <mat-card-subtitle class="no-m fs-12">Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card class="quick-card mat-elevation-z0">
+                <mat-card-content class="quick-card-content">
+                  <img mat-card-image
+                       src="https://lh3.google.com/u/0/d/1PbPGGDAicHECl_iLssoEiYVQ4hIkb_DkD2B5SOyTo5A=w600-k-iv4"
+                       alt="Photo of a Shiba Inu">
+                </mat-card-content>
+                <mat-card-header class="quick-card-header">
+                  <div mat-card-avatar class="quick-card-avatar">
+                    <img
+                      src="https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.document"
+                      alt="">
+                  </div>
+                  <mat-card-title class="no-m fs-13">Shiba Inu</mat-card-title>
+                  <mat-card-subtitle class="no-m fs-12">Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-card class="quick-card mat-elevation-z0">
+                <mat-card-content class="quick-card-content">
+                  <img mat-card-image
+                       src="https://lh3.google.com/u/0/d/1PbPGGDAicHECl_iLssoEiYVQ4hIkb_DkD2B5SOyTo5A=w600-k-iv4"
+                       alt="Photo of a Shiba Inu">
+                </mat-card-content>
+                <mat-card-header class="quick-card-header">
+                  <div mat-card-avatar class="quick-card-avatar">
+                    <img
+                      src="https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.document"
+                      alt="">
+                  </div>
+                  <mat-card-title class="no-m fs-13">Shiba Inu</mat-card-title>
+                  <mat-card-subtitle class="no-m fs-12">Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+            </mat-grid-tile>
+          </mat-grid-list>
+          <p class="fs-14">Folders</p>
+          <mat-grid-list [cols]="5" [gutterSize]="16" [rowHeight]="'72px'">
+            <mat-grid-tile class="folder-tile" *ngFor="let i of [1,2,3,4,5]">
+              <mat-list class="folder-list">
+                <mat-list-item>
+                  <mat-icon class="fs-20" mat-list-icon [color]="'accent'">folder</mat-icon>
+                  <h4 mat-line class="fs-13">Public posts</h4>
+                </mat-list-item>
+              </mat-list>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+          <p class="fs-14">Files</p>
+
+          <mat-grid-list [cols]="5" [gutterSize]="16" [rowHeight]="'248px'" *ngIf="gridView">
+            <mat-grid-tile *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]" class="grid-tile">
+              <mat-card class="quick-card mat-elevation-z0">
+                <mat-card-content class="quick-card-content">
+                  <img mat-card-image
+                       src="https://lh3.google.com/u/0/d/1PbPGGDAicHECl_iLssoEiYVQ4hIkb_DkD2B5SOyTo5A=w600-k-iv4"
+                       alt="Photo of a Shiba Inu">
+                </mat-card-content>
+                <mat-card-header class="quick-card-header">
+                  <div mat-card-avatar class="quick-card-avatar">
+                    <img
+                      src="https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.document"
+                      alt="">
+                  </div>
+                  <mat-card-title class="no-m fs-13 doc-name">Image from Himanshu Maheshwari</mat-card-title>
+                  <!--<mat-card-subtitle class="no-m fs-12">Dog Breed</mat-card-subtitle>-->
+                </mat-card-header>
+              </mat-card>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+
+          <div *ngIf="!gridView">
+            <table mat-table [dataSource]="dataSource" matSort class="">
+
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> No.</th>
+                <td mat-cell *matCellDef="let element">
+                  <mat-icon mat-list-icon>folder</mat-icon>
+                  {{element.name}}
+                </td>
+              </ng-container>
+
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner</th>
+                <td mat-cell *matCellDef="let element"> {{element.position}}</td>
+              </ng-container>
+
+              <!-- Weight Column -->
+              <ng-container matColumnDef="weight">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Modified</th>
+                <td mat-cell *matCellDef="let element"> {{element.weight}}</td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="symbol">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> DriveFile Size</th>
+                <td mat-cell *matCellDef="let element"> {{element.symbol}}</td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+          <!--<p *ngFor="let content of fillerContent">{{content}}</p>-->
+        </div>
+      </perfect-scrollbar>
+    </div>
+    <!--<router-outlet></router-outlet>-->
+  </div>
+
+  <!--</mat-sidenav-content>-->
+  <!--</mat-sidenav-container>-->
+</div>
